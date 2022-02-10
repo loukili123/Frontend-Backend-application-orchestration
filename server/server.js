@@ -1,11 +1,11 @@
 const session = require('express-session');
 const express = require("express");
-const app = express();
+const server = express();
 const port = process.env.SERVER_PORT || 5000;
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+server.listen(port, () => console.log(`Listening on port ${port}`));
 
-app.use(
+server.use(
     session({
         secret: 'secret starting',
         resave: false,
@@ -14,19 +14,21 @@ app.use(
     })
 );
 
-app.use(function(req, res, next) {
+server.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
   next();
   });
 
-app.get("/test", function(req, res){
+server.get("/", function(req, res){
 
     if(!req.session.mycounter)
       req.session.mycounter = 0;
     req.session.mycounter++;
-    res.send({
+    res.status(200).send({
       "message": "vous avez visité le site "+req.session.mycounter+" fois !"
     });
 
 });
+
+module.exports = server;

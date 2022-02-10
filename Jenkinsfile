@@ -2,9 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('satrt deploying') {
+        stage('Building and running docker images') {
           steps {
-            bat "docker-compose up --build"
+            bat "docker-compose up --build -d"
+          }
+        }
+		stage('Building and running Docker image') {
+          steps {
+            bat "cd server"
+			bat "npm install"
+			bat "npm test"
+          }
+        }
+		stage('Creating release') {
+          steps {
+            echo "comming"
           }
         }
     } 
