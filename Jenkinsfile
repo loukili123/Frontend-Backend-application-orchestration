@@ -4,10 +4,10 @@ pipeline {
     stages {
         stage('Building and running docker images') {
           steps {
-            bat "docker-compose up --build -d"
+            bat "docker-compose build -d"
           }
         }
-		stage('Building and running Docker image') {
+		stage('Testing api') {
           steps {
             bat '''
 				CD server
@@ -17,6 +17,11 @@ pipeline {
 				CD server
 				npm test
 			'''
+          }
+        }
+		stage('Running Docker image') {
+          steps {
+            bat "docker-compose up -d"
           }
         }
 		stage('Creating release') {
