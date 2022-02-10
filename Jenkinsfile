@@ -9,7 +9,7 @@ pipeline {
         }
 		stage('Building and running Docker image') {
           steps {
-            bat """cd \d ${"server"}"""
+            bat """cd ${"server"}"""
 			bat "npm install"
 			bat "npm test"
           }
