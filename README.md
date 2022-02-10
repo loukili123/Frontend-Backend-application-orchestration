@@ -13,3 +13,6 @@ Orchestration
 The application is to be orchestrated using Jenkins: the dockerization, testing and releasing processes.  Write the necessary Groovy code in a Jenkinsfile to create a pipeline that organizes the Docker image creation, building, and testing of your application. Ideally, we would want Jenkins to create a release branch, save the code there, and then run the tests. But due to the limitations currently in place, Your pipeline is to simply build the docker images, run the test, and then put the code on the release branch. The pipeline ends when the tests have passed, and the code have been placed on the release branch after.
 
 Your project deliverable is in the form of a link to your github repo, and a screenshot of your Jenkins build configurations, the build success screen, and the console output on build success.
+
+
+
