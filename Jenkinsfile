@@ -11,10 +11,9 @@ pipeline {
           steps {
             bat '''
 				CD server
-				cd
+				npm install
+				npm test
 			'''
-			bat "npm install"
-			bat "npm test"
           }
         }
 		stage('Creating release') {
