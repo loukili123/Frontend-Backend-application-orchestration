@@ -26,7 +26,7 @@ pipeline {
         }
 		stage('Creating release') {
           steps {
-            echo "comming"
+            bat "git push origin dev:release"
           }
         }
     } 
