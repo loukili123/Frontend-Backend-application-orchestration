@@ -28,9 +28,6 @@ pipeline {
           steps {
             bat '''
 			git checkout dev
-			git add .
-			git commit -m "release"
-			git push
 			git push origin dev:release
 			'''
           }
