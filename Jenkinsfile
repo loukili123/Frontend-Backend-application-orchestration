@@ -12,6 +12,9 @@ pipeline {
             bat '''
 				CD server
 				npm install
+			'''
+			bat '''
+				CD server
 				npm test
 			'''
           }
