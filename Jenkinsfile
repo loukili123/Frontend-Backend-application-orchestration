@@ -21,6 +21,7 @@ pipeline {
 				bat ''' git checkout dev
 						git tag -a tagName -m "coco"
 						git merge dev
+						git add .
 						git commit -am "Merged dev branch to master"
 						git push origin master
 					'''
