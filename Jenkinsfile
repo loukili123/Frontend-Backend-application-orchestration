@@ -26,12 +26,10 @@ pipeline {
         }
 		stage('Creating release') {
           steps {
-			withCredentials([usernamePassword(credentialsId: 'git-pass-credentials-ID', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
-				bat'''
-				git checkout dev
-				git push origin dev:release
-				'''
-			}
+            bat '''
+			git checkout dev
+			git push origin dev:release
+			'''
           }
         }
     } 
