@@ -27,8 +27,8 @@ pipeline {
 		stage('Creating release') {
           steps {
             bat '''
-			git checkout ${dev}
-			git push origin ${dev}:${release}
+			git checkout dev
+			git push origin dev:release
 			'''
           }
         }
