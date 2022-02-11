@@ -26,13 +26,12 @@ pipeline {
         }
 		stage('Creating release') {
           steps {
-            bat '''
-			git checkout dev
-			git add .
-			git commit -m "from jenkins"
-			git push
-			git push origin dev:release
-			'''
+			withCredentials([usernamePassword(credentialsId: 'git-pass-credentials-ID', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+				bat'''
+				git checkout dev
+				git push origin dev:release
+				'''
+			}
           }
         }
     } 
