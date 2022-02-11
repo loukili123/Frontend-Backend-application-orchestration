@@ -28,7 +28,9 @@ pipeline {
           steps {
             bat '''
 			git checkout dev
-			git pull
+			git add .
+			git commit -m "from jenkins"
+			git push
 			git push origin dev:release
 			'''
           }
