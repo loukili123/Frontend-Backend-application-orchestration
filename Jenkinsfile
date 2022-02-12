@@ -29,7 +29,6 @@ pipeline {
 
 				bat'''
 					git checkout dev
-					git pull
 					git push origin dev:release
 				'''
 			
