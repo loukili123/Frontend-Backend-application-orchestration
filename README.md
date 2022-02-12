@@ -25,4 +25,5 @@ Your project deliverable is in the form of a link to your github repo, and a scr
 ## Application composition
 
 Frontend = client
+
 Backend = server
