@@ -1,5 +1,5 @@
 # Dockerfile for React client
-FROM node:15.1-alpine
+FROM node:14
 
 # copy local files to app folder
 COPY . /usr/src/app
