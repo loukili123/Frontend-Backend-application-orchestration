@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Building docker images') {
           steps {
-            bat "docker-compose build -d"
+            bat "docker-compose build"
           }
         }
 		stage('Testing api') {
