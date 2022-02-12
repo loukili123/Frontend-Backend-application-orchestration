@@ -1,5 +1,5 @@
 #  Dockerfile for Node Express Backend
-FROM node:15.1-alpine
+FROM node:14
 
 # Create App Directory
 COPY . /usr/src/app
