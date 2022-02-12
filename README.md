@@ -27,3 +27,12 @@ Your project deliverable is in the form of a link to your github repo, and a scr
 Frontend = client
 
 Backend = server
+
+## Some problems
+
+For LOUKILI Bilal, the docker and the jenkins work perfectly !
+
+But, for me, TRAN Jean-pierre, the docker on my windows works perfectly. But for the jenkins part, somes commands don't work on my pc, for example "docker-compose -b", so I need to delete for me the '-b' to work.
+
+For the "git push origin dev:release", i fail to push the dev branch to release branch, and i don't know why.
+
