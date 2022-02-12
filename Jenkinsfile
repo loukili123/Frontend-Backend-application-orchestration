@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Building and running docker images') {
+        stage('Building docker images') {
           steps {
             bat "docker-compose build -d"
           }
